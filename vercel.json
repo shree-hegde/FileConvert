@@ -1,0 +1,18 @@
+{
+  "buildCommand": "next build",
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 3008
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/health",
+      "schedule": "*/5 * * * *"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "@site_url"
+  }
+}
